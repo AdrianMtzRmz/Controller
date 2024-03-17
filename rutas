@@ -1,0 +1,22 @@
+// routes/web.php
+
+use App\Http\Controllers\TeamsController;
+use App\Http\Controllers\PlayersController;
+use App\Http\Controllers\DivisionsController;
+use App\Http\Controllers\CitiesController;
+use App\Http\Controllers\ConferencesController;
+
+// Rutas para los equipos
+Route::get('/teams', [TeamsController::class, 'index']);
+
+// Rutas para los jugadores
+Route::get('/players', [PlayersController::class, 'index']);
+
+// Rutas para las divisiones
+Route::get('/divisions', [DivisionsController::class, 'index']);
+
+// Rutas para las ciudades
+Route::get('/cities', [CitiesController::class, 'index']);
+
+// Rutas para las conferencias
+Route::get('/conferences', [ConferencesController::class, 'index']);

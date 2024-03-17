@@ -1,0 +1,30 @@
+<!-- resources/views/teams/index.blade.php -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Equipos</title>
+</head>
+<body>
+    <h1>Listado de Equipos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Equipo</th>
+                <th>División</th>
+                <th>Ciudad</th>
+                <th>Conferencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($teams as $team)
+            <tr>
+                <td>{{ $team->name }}</td>
+                <td>{{ $team->division->name }}</td>
+                <td>{{ $team->city->name }}</td>
+                <td>{{ $team->conference->name }}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</body>
+</html>

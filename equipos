@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Team; 
+
+class TeamsController extends Controller
+{
+    public function index()
+    {
+        // Obtener todos los equipos con relaciones cargadas
+        $teams = Team::with('division', 'city', 'conference')->get();
+        
+        // Devolver vista con datos
+        return view('teams.index', compact('teams'));
+    }
+}
